@@ -1,0 +1,33 @@
+.films-carousel {
+    width: 352px;
+    height: 420px;
+    background: red;
+}
+
+.films-grid {
+    margin-top: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 1000px;
+    background-image: url("https://xenothemes.co.uk/specto/wp-content/uploads/sites/2/2018/03/hero-2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    left: 5%;
+    bottom: 30%;
+    text-align: left;
+}
+
+.underlined {
+    text-decoration: underline;
+    text-decoration-color: #d99543;
+    padding: 0;
+}

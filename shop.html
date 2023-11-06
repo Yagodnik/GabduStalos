@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GABDUSTALOS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/shop.css">
+    <script src="scripts/shop.js"></script>
+    <script src="scripts/order-list.js"></script>
+</head>
+<body data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar" data-bs-theme="dark">
+        <div class="container-fluid">
+            <span class="navbar-brand animate-charcter mb-0 h1">GABDUSTALOS</span >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <div class="title">
+                            <i class="bi bi-house-door-fill"></i>
+                            <a class="nav-link" aria-current="page" href="index.html">Главная</a>
+                        </div>
+                        <div class="bottom-outline"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="title">
+                            <i class="bi bi-camera-reels-fill"></i>
+                            <a class="nav-link" aria-current="page" href="films.html">Фильмы</a>
+                        </div>
+                        <div class="bottom-outline"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="title">
+                            <i class="bi bi-bag-fill"></i>
+                            <a class="nav-link" aria-current="page" href="merch.html">Мерч</a>
+                        </div>
+                        <div class="bottom-outline"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="title">
+                            <i class="bi bi-cart-fill"></i>
+                            <a class="nav-link position-relative active" aria-current="page" href="shop.html">
+                                Корзина
+                                <span class="position-absolute count-icon translate-middle badge rounded-pill bg-danger" id="itemsCount">
+                                    0
+                                </span>
+                            </a>
+                        </div>
+                        <div class="bottom-outline"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title animate-charcter" id="offcanvasTopLabel">Благодарим за покупка нашего мерча</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        Мы очень благодарным вам за то, что вы поддерживаете нашу компанию и помогаете нам дальше <s>просто бухать</s> создавать новые фильмы! <3
+        </div>
+    </div>
+
+    <div class="shop">
+        <div class="row g-3">
+            <div class="col-sm-7">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="header">
+                            <h1 class="card-title">Ваш заказ</h1>
+                            <button type="button" class="btn btn-dark" onclick="shop.reset();">Очистить корзину</button>
+                        </div>
+                        
+                        <ul class="list-group list-group-flush" id="orderList"></ul>   
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title">Оплата</h1>
+
+                        <h4><span class="animate-charcter" id="fullPrice"></span></h4>
+
+                        <hr>
+
+                        <h1 class="card-title">Адрес доставки</h1>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1" style="width: 160px;">Адрес</span>
+                            <input type="text" class="form-control" aria-describedby="basic-addon1">
+                        </div>
+
+                        <hr>
+
+                        <h1 class="card-title">Данные</h1>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1" style="width: 160px;">Номер телефона</span>
+                            <input id="phone-number" type="tel" class="form-control" aria-describedby="basic-addon1" onchange="checkInput();" required>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1" style="width: 160px;">Номер карты</span>
+                            <input id="card-number" type="text" class="form-control" aria-describedby="basic-addon1" onchange="checkInput();" required>
+                        </div>
+                        
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1" style="width: 160px;">Срок</span>
+                            <input id="date-input" type="text" class="form-control" aria-describedby="basic-addon1" onchange="checkInput();" required>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1" style="width: 160px;">CVS</span>
+                            <input id="csv-number" type="text" class="form-control" aria-describedby="basic-addon1" onchange="checkInput();" required>
+                        </div>
+                        
+                        <button id="buy-button" type="button" class="btn btn-dark disabled" style="width: 100%;" onclick="buyStuff();"><s>Просто отправить деньги</s> Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

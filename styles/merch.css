@@ -1,0 +1,61 @@
+.shop {
+    margin-top: 15px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.price {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.price .crossed {
+    text-decoration: line-through;
+    font-size: 16px;
+    padding-right: 5px;
+}
+
+.price * {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 33px;
+    margin: 0;
+}
+
+.shop .underlined {
+    text-decoration: underline;
+    text-decoration-color: #d99543;
+    padding: 0;
+}
+
+.card .reasons {
+    padding-left: 0;
+    list-style: none;
+}
+
+.card .reasons * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card .reasons li * {
+    display: inline;
+}
+
+.card .reasons li i {
+    padding: 1px;
+    margin: 0;
+    color: #d99543;
+}

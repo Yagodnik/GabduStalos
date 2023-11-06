@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GABDUSTALOS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/shop.js"></script>
+</head>
+<body data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar" data-bs-theme="dark">
+        <div class="container-fluid">
+            <span class="navbar-brand animate-charcter mb-0 h1">GABDUSTALOS</span >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <div class="title">
+                            <i class="bi bi-house-door-fill"></i>
+                            <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                        </div>
+                        <div class="bottom-outline"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="title">
+                            <i class="bi bi-camera-reels-fill"></i>
+                            <a class="nav-link" aria-current="page" href="films.html">Фильмы</a>
+                        </div>
+                        <div class="bottom-outline"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="title">
+                            <i class="bi bi-bag-fill"></i>
+                            <a class="nav-link  " aria-current="page" href="merch.html">Мерч</a>
+                        </div>
+                        <div class="bottom-outline"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="title">
+                            <i class="bi bi-cart-fill"></i>
+                            <a class="nav-link position-relative" aria-current="page" href="shop.html">
+                                Корзина
+                                <span class="position-absolute count-icon translate-middle badge rounded-pill bg-danger" id="itemsCount">
+                                    0
+                                </span>
+                            </a>
+                        </div>
+                        <div class="bottom-outline"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main role="main" class="container" style="padding-top: 30px;">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <img src="assets/logo.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="jumbotron">
+                    <h1>О нас</h1>
+                    <p class="lead">
+                        Киностудия “GABDUSTALOS” является независимой командой кинематографистов, создавшей два оригинальных короткометражных фильма: “Стас и Габдул: В поисках Адута” и “Материя Сурка”. Эти проекты были созданы с целью объединить усилия двух талантливых людей – Стаса и Габдула, и вместе искать приключения, юмор и незабываемые моменты.
+                        <br><br>
+                        Киностудия “GABDUSTALOS” известна своим нестандартным подходом к созданию фильмов, используя оригинальные сценарии и необычные сюжетные ходы.
+                    </p>
+                    <!-- <a class="btn btn-lg btn-dark" href="./films.html" role="button">Наши фильмы</a>
+                    <a class="btn btn-lg btn-dark" href="./merch.html" role="button">Наш мерч</a> -->
+
+                    <h1>Контакты</h1>
+                    <p class="lead"><span class="underlined">Телефон:</span> +712345678</p>
+                    <p class="lead"><span class="underlined">Почта:</span> duckyou@gabdustalos.com</p>
+                    <p class="lead"><span class="underlined">Адрес:</span> А тебе зачем?</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<!-- 
+    <div id="films-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#films-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#films-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#films-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <div class="carousel-caption">
+                    <h1>Стас и Габдул: в поисках Адута</h1>
+                    <h3>Уникальные фильм о приключениях Стаса и Габдула</h3>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="10000">
+                <div class="carousel-caption">
+                    <h1>Стас и Габдул 2: в поисках Адута</h1>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="10000">
+                <div class="carousel-caption">
+                    <h1>Стас и Габдул 3: в поисках Адута</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handler(e) {
+            const navbar = document.getElementById("navbar");
+            const carousel = document.getElementById("films-carousel");
+            const items = document.getElementsByClassName("carousel-item");
+            const body = document.body, html = document.documentElement;
+            const height = window.innerHeight;
+
+            carousel.style.height = (height - navbar.offsetHeight) + "px";
+
+            for (var i = 0;i < items.length;i++) 
+                items[i].style.height = (height - navbar.offsetHeight) + "px"; 
+            // TODO: Add maxheight
+        }
+
+        window.onresize = handler;
+        window.onload = function(e) {
+            handler();
+            shop.onLoad();
+        };
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
