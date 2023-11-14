@@ -11,7 +11,8 @@ class Shop {
     constructor() {
         this.items = [
             new Item(1, 0, "Футболка GABDUSTALOS", 998),
-            new Item(2, 0, "Футболка с логотипом GABDUSTALOS", 998)
+            new Item(2, 0, "Футболка с логотипом GABDUSTALOS", 998),
+            new Item(3, 0, "Плакат GABDUSTALOS", 498)
         ];
         this.cart = [];
         this.readyHandler = function() {};

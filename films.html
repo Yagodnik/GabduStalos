@@ -58,6 +58,23 @@
         </div>
     </nav>
 
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title animate-charcter" id="offcanvasTopLabel">Что-то пошло не так!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        Не удалось установить подклбчение. Может, вы забыли голову дома?
+        </div>
+    </div>
+
+    <script>
+        function showDialog() {
+            const bsOffcanvas = new bootstrap.Offcanvas('#offcanvasTop')
+            bsOffcanvas.show();
+        }
+    </script>
+
     <div class="films">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
@@ -66,14 +83,14 @@
                     <div class="card-body">
                         <h2 class="card-title">Стас и Габдул: в поисках Адута</h2>
                         
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion" id="accordionFlushExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                     Описание
                                     </button>
                                 </h2>
-                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div id="flush-collapseOne" class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         <p class="card-text">
                                             "Стас и Габдул: В поисках Адута” - это увлекательный приключенческий фильм, рассказывающий о сыне Стасе и батёчке Габдуле, которые отправляются в опасное путешествие, чтобы найти своего родственника по имени Адут.
@@ -96,7 +113,7 @@
                                     Оценки
                                     </button>
                                 </h2>
-                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         <ul class="ratings-list">
                                             <li>
@@ -122,7 +139,7 @@
                                             </li>
                 
                                             <li>
-                                                <p>Ещё какое-то говно</p>
+                                                <p>Очередные критики, на которых всем пофиг</p>
                                                 <div class="rating">
                                                     <i class="bi bi-star-fill"></i>
                                                     <i class="bi bi-star-fill"></i>
@@ -144,7 +161,7 @@
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-dark btn-sm" onclick="window.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Смотреть на Youtube</button>
                             <button type="button" class="btn btn-dark btn-sm" onclick="window.location = 'https://rutube.ru/video/c6cc4d620b1d4338901770a44b3e82f4/'">Смотреть на Rutube</button>
-                            <button type="button" class="btn btn-dark btn-sm" onclick="window.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Смотреть в своей голове</button>
+                            <button type="button" class="btn btn-dark btn-sm" onclick="showDialog();">Смотреть в своей голове</button>
                         </div>
                     </div>
                 </div>
@@ -163,7 +180,7 @@
                                     Описание
                                     </button>
                                 </h2>
-                                <div id="movie2-description" class="accordion-collapse collapse" data-bs-parent="#film-card-2">
+                                <div id="movie2-description" class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         <p class="card-text">
                                             “Материя сурка” - это интригующий и захватывающий фильм, представляющий собой уникальное сочетание жанров, включая научную фантастику, триллер и драму, что делает его интересным для зрителей разных возрастов и предпочтений.
@@ -184,7 +201,7 @@
                                     Оценки
                                     </button>
                                 </h2>
-                                <div id="movie2-rating" class="accordion-collapse collapse" data-bs-parent="#film-card-2">
+                                <div id="movie2-rating" class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         <ul class="ratings-list">
                                             <li>
@@ -210,7 +227,7 @@
                                             </li>
                 
                                             <li>
-                                                <p>Ещё какое-то говно</p>
+                                                <p>Очередные критики, на которых всем пофиг</p>
                                                 <div class="rating">
                                                     <i class="bi bi-star-fill"></i>
                                                     <i class="bi bi-star-fill"></i>
@@ -232,7 +249,7 @@
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-dark btn-sm" onclick="window.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Смотреть на Youtube</button>
                             <button type="button" class="btn btn-dark btn-sm" onclick="window.location = 'https://rutube.ru/video/c6cc4d620b1d4338901770a44b3e82f4/'">Смотреть на Rutube</button>
-                            <button type="button" class="btn btn-dark btn-sm" onclick="window.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Смотреть в своей голове</button>
+                            <button type="button" class="btn btn-dark btn-sm" onclick="showDialog();">Смотреть в своей голове</button>
                         </div>
                     </div>
                 </div>
@@ -251,7 +268,7 @@
                                     Описание
                                     </button>
                                 </h2>
-                                <div id="movie3-description" class="accordion-collapse collapse" data-bs-parent="#film-card-3">
+                                <div id="movie3-description" class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         <p class="card-text">
                                             “Подполье” - это интригующий и атмосферный фильм, погружающий зрителя в мрачный и таинственный мир подполья.
@@ -274,7 +291,7 @@
                                     Оценки
                                     </button>
                                 </h2>
-                                <div id="movie3-rating" class="accordion-collapse collapse" data-bs-parent="#film-card-3">
+                                <div id="movie3-rating" class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         <ul class="ratings-list">
                                             <li>
@@ -300,7 +317,7 @@
                                             </li>
                 
                                             <li>
-                                                <p>Ещё какое-то говно</p>
+                                                <p>Очередные критики, на которых всем пофиг</p>
                                                 <div class="rating">
                                                     <i class="bi bi-star-fill"></i>
                                                     <i class="bi bi-star-fill"></i>
@@ -322,7 +339,7 @@
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-dark btn-sm" onclick="window.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Смотреть на Youtube</button>
                             <button type="button" class="btn btn-dark btn-sm" onclick="window.location = 'https://rutube.ru/video/c6cc4d620b1d4338901770a44b3e82f4/'">Смотреть на Rutube</button>
-                            <button type="button" class="btn btn-dark btn-sm" onclick="window.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Смотреть в своей голове</button>
+                            <button type="button" class="btn btn-dark btn-sm" onclick="showDialog();">Смотреть в своей голове</button>
                         </div>
                     </div>
                 </div>
